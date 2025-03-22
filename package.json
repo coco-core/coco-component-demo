@@ -1,11 +1,10 @@
 {
-  "name": "@cocojs/component-demo",
+  "name": "cocojs-component-demo",
   "version": "0.0.1",
-  "description": "组件库演示",
+  "description": "官网的组件库，也用于演示组件库使用",
   "main": "dist/bundle.js",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "coco build lib",
