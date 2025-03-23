@@ -1,41 +1,27 @@
 {
-  "name": "@cocojs/component-demo",
-  "version": "0.0.1",
-  "description": "组件库演示",
-  "main": "dist/bundle.js",
+  "name": "cocojs-component-demo",
+  "version": "0.0.3",
+  "description": "官网的组件库，也是组件库演示",
+  "type": "module",
+  "module": "dist/bundle.esm.js",
+  "types": "dist/types/lib.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
-    "build": "rollup --config rollup.config.mjs",
+    "build": "coco build lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.25.9",
-    "@babel/plugin-transform-react-jsx": "^7.25.9",
-    "@babel/preset-typescript": "^7.26.0",
-    "@cocojs/cli": "0.0.1-alpha202502221137",
-    "@cocojs/typescript-transformer": "^0.0.9",
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-typescript": "^12.1.2",
-    "autoprefixer": "^10.4.20",
-    "babel-loader": "^9.2.1",
-    "postcss": "^8.4.49",
-    "postcss-loader": "^8.1.1",
-    "rollup": "^4.34.8",
-    "rollup-plugin-postcss": "^4.0.2",
-    "style-loader": "^4.0.0",
-    "tailwindcss": "^3.4.17",
-    "ts-loader": "^9.5.2",
-    "ts-patch": "^3.3.0",
-    "tslib": "^2.8.1",
-    "typescript": "^5.7.3"
+    "@cocojs/cli": "^0.0.1-alpha202503192210",
+    "@cocojs/typescript-transformer": "0.0.10",
+    "ts-patch": "3.1.2",
+    "typescript": "5.3.3"
   },
   "peerDependencies": {
-    "coco-mvc": "^0.0.1-alpha202502221137"
+    "coco-mvc": "^0.0.1-alpha202503192210"
   }
 }
