@@ -1,8 +1,10 @@
 {
   "name": "cocojs-component-demo",
-  "version": "0.0.1",
-  "description": "官网的组件库，也用于演示组件库使用",
-  "main": "dist/bundle.js",
+  "version": "0.0.3",
+  "description": "官网的组件库，也是组件库演示",
+  "type": "module",
+  "module": "dist/bundle.esm.js",
+  "types": "dist/types/lib.d.ts",
   "files": [
     "dist"
   ],
