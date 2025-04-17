@@ -9,7 +9,7 @@ class Button {
   }
 
   color = () => {
-    return this.props.type === "primary" ? "text-white bg-primary" : "text-primary border-primary border-2";
+    return this.props.type === "primary" ? "text-white bg-primary" : "text-primary border-primary border";
   }
 
   render() {
