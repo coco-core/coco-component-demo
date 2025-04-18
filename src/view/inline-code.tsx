@@ -3,9 +3,9 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.min.css'
 
 @view()
-class Code {
+class InlineCode {
   props: {
-    code: string;
+    children: string;
   }
 
   @ref()
@@ -18,12 +18,10 @@ class Code {
   }
 
   render() {
-    return <pre>
-      <code ref={this.ref} className={`prism-code language-js`}>
-        {this.props.code.trim()}
-      </code>
-    </pre>
+    return <code ref={this.ref} className={`prism-code language-js`}>
+      {this.props.children.trim()}
+    </code>
   }
 }
 
-export default Code;
+export default InlineCode;

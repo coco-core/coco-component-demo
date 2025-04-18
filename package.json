@@ -9,6 +9,7 @@
     "dist"
   ],
   "scripts": {
+    "dev": "coco dev",
     "build": "coco build lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +24,8 @@
   },
   "peerDependencies": {
     "coco-mvc": "^0.0.1-alpha202504121038"
+  },
+  "dependencies": {
+    "prismjs": "^1.30.0"
   }
 }

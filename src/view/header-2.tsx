@@ -7,7 +7,7 @@ class Header2 {
   }
 
   render() {
-    return <div className={'text-3xl font-bold leading-normal'}>
+    return <div className={'text-3xl leading-normal'}>
       {this.props.children}
     </div>
   }
