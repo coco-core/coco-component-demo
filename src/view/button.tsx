@@ -1,23 +1,41 @@
-import { view } from 'coco-mvc';
+import {view} from 'coco-mvc';
+
+interface IButtonProps {
+  children: string;
+  onClick?: () => void;
+  type: 'primary' | 'link' | 'primary-link';
+  loading?: boolean;
+}
 
 @view()
 class Button {
-  props: {
-    children: string;
-    onClick: () => void;
-    type: 'primary' | 'default'
-  }
+  props: IButtonProps
 
   color = () => {
-    return this.props.type === "primary" ? "text-white bg-primary" : "text-primary border-primary border";
+    switch (this.props.type) {
+      case 'primary-link':
+        return 'text-primary';
+      case 'link':
+        return 'text-black';
+      case 'primary':
+        return "text-white bg-primary";
+      default:
+        return "text-black border-black border";
+    }
+  }
+
+  onClick = () => {
+    if (!this.props.loading) {
+      this.props.onClick?.();
+    }
   }
 
   render() {
     return <div
-      className={`inline-flex justify-center items-center h-10 px-8 rounded-md cursor-pointer ${this.color()}`}
-      onClick={this.props.onClick}
+      className={`inline-flex justify-center items-center h-10 px-8 rounded-md cursor-pointer select-none ${this.color()}`}
+      onClick={this.onClick}
     >
-      {this.props.children}
+      {this.props.children}{this.props.loading ? `...` : null}
     </div>
   }
 }

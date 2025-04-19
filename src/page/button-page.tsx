@@ -7,7 +7,11 @@ class ButtonPage {
 
   render() {
     return <div>
-      <Button onClick={() => {}} type={'default'}>btn</Button>
+      <Button type={'default'}>default</Button>
+      <Button type={'primary'}>primary</Button>
+      <Button type={'link'}>link</Button>
+      <Button type={'primary-link'}>primary link</Button>
+      <Button type={'primary-link'} loading>primary link</Button>
     </div>
   }
 }

@@ -5,7 +5,7 @@ import 'prismjs/themes/prism.min.css'
 @view()
 class Code {
   props: {
-    code: string;
+    code?: string;
   }
 
   @ref()
@@ -17,10 +17,16 @@ class Code {
     }
   }
 
+  viewDidUpdate() {
+    if (this.ref.current) {
+      Prism.highlightElement(this.ref.current);
+    }
+  }
+
   render() {
     return <pre>
       <code ref={this.ref} className={`prism-code language-js`}>
-        {this.props.code.trim()}
+        {this.props.code?.trim()}
       </code>
     </pre>
   }
